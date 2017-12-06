@@ -6,7 +6,6 @@ class PostsController < ApplicationController
   # GET /posts
   def index
     @posts = Post.all
-
     render json: @posts
   end
 
@@ -49,7 +48,7 @@ class PostsController < ApplicationController
   end
 
   def check_relevant
-    if @post.user_id == current_user.id
+    if @post.user_id != current_user.id
       return render json: {
         errors: ['This entry does not belong to you']
       }, status: :forbidden
