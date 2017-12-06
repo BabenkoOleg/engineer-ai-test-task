@@ -30,6 +30,7 @@ gem 'devise_token_auth'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'annotate'
   gem 'rspec-rails', '~> 3.6'
   gem 'database_cleaner'
   gem 'factory_bot_rails'
